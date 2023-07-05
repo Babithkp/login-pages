@@ -1,0 +1,258 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-image: linear-gradient(to right bottom, rgb(0, 51, 87), rgba(0, 131, 255, 0.5));
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  height: 70vh;
+  width: 30rem;
+  position: relative;
+}
+
+.login-page {
+  width: 100%;
+  color: black;
+  background-image: linear-gradient(to right bottom, rgba(105, 140, 159, 0.6), rgba(232, 234, 237, 0.5));
+  position: absolute;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 5px;
+  box-shadow: 0.5rem 0.5rem 1rem black;
+  z-index: 10;
+  backface-visibility: hidden;
+  transition: transform 2s;
+  perspective: 150rem;
+  transform-style: preserve-3d;
+}
+.login-page--facebook, .login-page--twitter {
+  height: 3.5rem;
+  margin-right: 2rem;
+  border: rgba(238, 238, 238, 0.9333333333) solid 1.5px;
+  border-radius: 100px;
+  padding: 6px;
+  background-color: #fff;
+  cursor: pointer;
+}
+.login-page--or {
+  font-size: 1.2rem;
+}
+.login-page-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 80%;
+  margin-top: -1rem;
+}
+.login-page-form--email, .login-page-form--password {
+  height: 3rem;
+  margin-bottom: 1rem;
+  background-color: #fff;
+  font-family: sans-serif;
+  font-size: 1.4rem;
+  border: none;
+  outline: none;
+  padding-left: 0.5rem;
+}
+.login-page--btn {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.login-page .btn {
+  width: 35%;
+  margin-bottom: 2rem;
+  margin-right: 1rem;
+  height: 3rem;
+  border-radius: 2rem;
+  text-transform: uppercase;
+  font-size: 10px;
+  background-color: #ff4b2b;
+  border: none;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0.2rem 0.2rem 0.5rem black;
+}
+.login-page .btn:hover {
+  box-shadow: 0.5rem 0.5rem 1rem black;
+  transform: translateY(-1px);
+}
+.login-page .btn:active {
+  transform: translateY(0.5px);
+  box-shadow: 0.2rem 0.2rem 0.5rem black;
+}
+.login-page--forget {
+  color: black;
+  letter-spacing: 0.5px;
+  font-size: 1.3rem;
+  font-weight: 300;
+}
+
+.signUp {
+  width: 35%;
+  margin-bottom: 2rem;
+  margin-right: 1rem;
+  height: 3rem;
+  border-radius: 2rem;
+  text-transform: uppercase;
+  font-size: 10px;
+  background-color: #ff4b2b;
+  border: none;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0.2rem 0.2rem 0.5rem black;
+}
+.signUp:hover {
+  box-shadow: 0.5rem 0.5rem 1rem black;
+  transform: translateY(-1px);
+}
+.signUp:active {
+  transform: translateY(0.5px);
+  box-shadow: 0.2rem 0.2rem 0.5rem black;
+}
+
+h2 {
+  margin-top: 1rem;
+  font-size: 3rem;
+  text-transform: uppercase;
+}
+
+.signup-page {
+  position: absolute;
+  background-image: linear-gradient(to right bottom, rgba(48, 122, 162, 0.6), rgba(254, 201, 111, 0.5));
+  height: 100%;
+  width: 100%;
+  border-radius: 5px;
+  transition: transform 2s;
+  perspective: 150rem;
+  transform: rotateY(180deg);
+  transform-style: preserve-3d;
+  box-shadow: 0.5rem 0.5rem 1rem black;
+  backface-visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.signup-page-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: -0.8rem;
+}
+.signup-page-form--firstname, .signup-page-form--lastname, .signup-page-form--email, .signup-page-form--password, .signup-page-form--conformpassword {
+  height: 2.5rem;
+  margin-bottom: 1rem;
+  background-color: #fff;
+  font-family: sans-serif;
+  font-size: 1.4rem;
+  border: none;
+  outline: none;
+  padding-left: 0.2rem;
+  font-size: 1.2rem;
+  outline: rgb(14, 121, 14) solid 2px;
+}
+.signup-page-form--wrongPass {
+  margin-top: -1rem;
+  color: red;
+  font-size: 0.9rem;
+  display: none;
+}
+.signup-page--required {
+  display: none;
+  color: red;
+  font-size: 1rem;
+  margin-left: 1.4rem;
+  margin-top: -0.2rem;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+a {
+  text-decoration: none;
+}
+
+.required-first {
+  display: none;
+  color: red;
+  font-size: 1rem;
+  margin-left: 1.4rem;
+  margin-top: -0.2rem;
+  font-weight: 500;
+  text-transform: capitalize;
+  margin-left: -0.2rem;
+  margin-top: -1.5rem;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+.required-last {
+  display: none;
+  color: red;
+  font-size: 1rem;
+  margin-left: 1.4rem;
+  margin-top: -0.2rem;
+  font-weight: 500;
+  text-transform: capitalize;
+  margin-left: -0.2rem;
+  margin-top: -1.5rem;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+.required-email {
+  display: none;
+  color: red;
+  font-size: 1rem;
+  margin-left: 1.4rem;
+  margin-top: -0.2rem;
+  font-weight: 500;
+  text-transform: capitalize;
+  margin-left: -0.2rem;
+  margin-top: -1.5rem;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+.required-password {
+  display: none;
+  color: red;
+  font-size: 1rem;
+  margin-left: 1.4rem;
+  margin-top: -0.2rem;
+  font-weight: 500;
+  text-transform: capitalize;
+  margin-left: -0.2rem;
+  margin-top: -1.5rem;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+.required-conform {
+  display: none;
+  color: red;
+  font-size: 1rem;
+  margin-left: 1.4rem;
+  margin-top: -0.2rem;
+  font-weight: 500;
+  text-transform: capitalize;
+  margin-left: -0.2rem;
+  margin-top: -1.5rem;
+  font-weight: 500;
+  text-transform: capitalize;
+}/*# sourceMappingURL=main.css.map */

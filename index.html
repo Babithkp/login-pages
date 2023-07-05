@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="/img/download.png">
+    <link rel="stylesheet" href="style.css"/>
+    <script src="script.js" defer=""></script>
+    
+    <title>Login</title>
+  </head>
+  <body>
+    <div class="container">
+
+      <div class="login-page ">
+        <h2>login</h2>
+        <div class="logo">
+            <img class="login-page--facebook" src="img/facebook-svgrepo-com.svg" alt="">
+            <img class="login-page--twitter" src="img/twitter-svgrepo-com.svg" alt="">
+        </div>
+        <p class="login-page--or">or use your account</p>
+        <div class="login-page-form">
+          <input type="text" class="login-page-form--email" placeholder="Email">
+            <input type="password" class="login-page-form--password" placeholder="Password">
+          </div>
+
+          <a href="#" class="login-page--forget">Forget your password?</a>
+          
+          <div class="login-page--btn">
+            <button type="submit" class="login-page--signIn btn" id="signIN">sign in</button>
+            <button type="submit" class="login-page--signUp btn" id="signUP">sign up</button>
+          </div>
+        </div>
+        
+        
+        <div class="signup-page">
+          <h2 class="login-page--head">Sign Up</h2>
+          <p class="login-page--intruct">Please fill in the form to create an account</p>
+          <div class="signup-page-form">
+            <input type="text" class="signup-page-form--firstname" placeholder="First name">
+            <p class="required-first">
+                This field is required !
+              </p>
+            <input type="text" class="signup-page-form--lastname" placeholder="Last name">
+            <p class="required-last">
+                This field is required !
+              </p>
+            <input type="email" class="signup-page-form--email" placeholder="Email">
+            <p class="required-email">
+                This field is required !
+              </p>
+            <input type="password" class="signup-page-form--password" placeholder="password">
+            <p class="required-password">
+                This field is required !
+              </p>
+            <div class="signup-page-form--wrongPass">
+              Please check entered password !
+            </div>
+            <input type="text" class="signup-page-form--conformpassword" placeholder="Conform Password">
+            <p class="required-conform">
+                This field is required !
+              </p>
+            <div class="signup-page-form--wrongPass">
+              Please check entered password !
+            </div>
+          </div>
+          <div class="signup-page--checkbox">
+            <p class="signup-page--term">
+              <input type="checkbox" name="term" class="checkbox" required> I accept the 
+              <a href="#">Terms of use</a> and 
+              <a href="#">privacy policy</a>
+              <p class="signup-page--required">
+                This field is required !
+              </p>
+            </p>
+          </div>
+          <button type="submit" class="signUp btn" id="SignUP">sign up</button>
+          </div>
+        </div>
+      </div>
+  </body>
+</html>
