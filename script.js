@@ -95,7 +95,8 @@ finalsignUp.addEventListener("click", function () {
     addto.email &&
     addto.pass &&
     addto.compass &&
-    required.checked
+    required.checked &&
+    addto.pass === addto.compass
   ) {
     logPage.style = "transform: rotateY(0deg)";
     subPage.style = "transform: rotateY(180deg)";
