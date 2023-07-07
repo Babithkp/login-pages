@@ -8,6 +8,11 @@ html {
   box-sizing: border-box;
   font-size: 78%;
 }
+@media only screen and (max-width: 25em) {
+  html {
+    font-size: 52.6%;
+  }
+}
 
 body {
   font-family: "Poppins", sans-serif;
@@ -260,4 +265,40 @@ a {
   margin-top: -1.5rem;
   font-weight: 500;
   text-transform: capitalize;
+}
+.required-Email {
+  display: none;
+  color: red;
+  font-size: 1rem;
+  margin-left: 1.4rem;
+  margin-top: -0.2rem;
+  font-weight: 500;
+  text-transform: capitalize;
+  margin-left: -0.1rem;
+  margin-top: -1rem;
+  margin-bottom: 0.5rem;
+}
+.required-pass {
+  display: none;
+  color: red;
+  font-size: 1rem;
+  margin-left: 1.4rem;
+  margin-top: -0.2rem;
+  font-weight: 500;
+  text-transform: capitalize;
+  margin-left: -0.1rem;
+  margin-top: -1rem;
+  margin-bottom: 0.5rem;
+}
+.required-wrong {
+  display: none;
+  color: red;
+  font-size: 1rem;
+  margin-left: 1.4rem;
+  margin-top: -0.2rem;
+  font-weight: 500;
+  text-transform: capitalize;
+  margin-left: -0.1rem;
+  margin-top: -1rem;
+  margin-bottom: 0.5rem;
 }/*# sourceMappingURL=main.css.map */
