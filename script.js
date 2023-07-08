@@ -91,20 +91,23 @@ const condition = function (addto) {
   }
 };
 
-signIn.addEventListener("click", function () {
-  const GetMail = email.value;
-  const GetPassword = password.value;
-  if(!GetMail){
+const signBtn = function(GetMail,GetPassword){
+  if (!GetMail) {
     mailBlock.style.display = "block";
     email.style.outline = "red solid 2px";
   }
   if (!GetPassword) {
     password.style.outline = "red solid 2px";
     passBlock.style.display = "block";
-  }
-  else if(GetPassword !== account.pass){
+  } else if (GetPassword !== account.pass) {
     wrongBlock.style.display = "block";
   }
+}
+
+signIn.addEventListener("click", function () {
+  const GetMail = email.value;
+  const GetPassword = password.value;
+  signBtn(GetMail, GetPassword);
 });
 
 signUp.addEventListener("click", function () {
