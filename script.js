@@ -9,11 +9,12 @@ const subPage = document.querySelector(".signup-page");
 
 
 
+const loginEmailRequired = document.querySelector(".required-Email");
+const loginEmailAcNOt = document.querySelector(".login-page--accNotFound");
+const loginPassRequired = document.querySelector(".required-pass");
+const loginPassWrongpass = document.querySelector(".required-wrong");
 
 
-const mailBlock = document.querySelector(".required-Email");
-const passBlock = document.querySelector(".required-pass");
-const wrongBlock = document.querySelector(".required-wrong");
 
 const finalsignUp = document.querySelector("#SignUP");
 const GetFirst = document.querySelector(".signup-page-form--firstname");
@@ -31,11 +32,14 @@ const fieldemail = document.querySelector(".required-email");
 const fieldpassword = document.querySelector(".required-password");
 const fieldconform = document.querySelector(".required-conform");
 
+
+const logined = document.querySelector(".logined");
+
+
 const account = {
-  first: [],
-  last: [],
-  email: [],
-  pass: [],
+  first: "",
+  email: "",
+  pass: "",
 }
 
 class details {
@@ -44,19 +48,18 @@ class details {
     this.last = last;
     this.email = email;
     this.pass = pass;
+    this.compass = compass;
   }
 
   comprair = function () {
     return `${this.pass} === ${this.compass} ? ${true} :${false}`;
   };
 
-  storeData = function(){
-    account.first.push(this.first);
-    account.last.push(this.last);
-    account.email.push(this.email);
-    account.pass.push(this.pass);
-    account.compass.push(this.compass);
-  }
+  createAcc = function(){
+    account.first = this.first;
+    account.email = this.email;
+    account.pass = this.pass;
+  };
 }
 
 const condition = function (addto) {
@@ -91,23 +94,35 @@ const condition = function (addto) {
   }
 };
 
-const signBtn = function(GetMail,GetPassword){
+
+const logincondition = function (GetMail, GetPassword) {
   if (!GetMail) {
-    mailBlock.style.display = "block";
+    loginEmailRequired.style.display = "block";
     email.style.outline = "red solid 2px";
+    return false;
+  } else if (GetMail !== account.email) {
+    loginEmailAcNOt.style.display = "block";
+    return false;
+  } else if (GetPassword !== account.pass) {
+    loginPassWrongpass.style.display = "block";
+    return false;
   }
   if (!GetPassword) {
+    loginPassRequired.style.display = "block";
     password.style.outline = "red solid 2px";
-    passBlock.style.display = "block";
-  } else if (GetPassword !== account.pass) {
-    wrongBlock.style.display = "block";
+    return false;
   }
-}
+  return true;
+};
 
 signIn.addEventListener("click", function () {
   const GetMail = email.value;
   const GetPassword = password.value;
-  signBtn(GetMail, GetPassword);
+  if(logincondition(GetMail,GetPassword)){
+    logined.style.visibility = "visible";
+    logPage.style.visibility = "hidden";
+    subPage.style.visibility = "hidden";
+  };
 });
 
 signUp.addEventListener("click", function () {
@@ -135,10 +150,7 @@ finalsignUp.addEventListener("click", function () {
   ) {
     logPage.style = "transform: rotateY(0deg)";
     subPage.style = "transform: rotateY(180deg)";
-    addto.storeData();
+    addto.createAcc();
   }
 });
 
-const login = function(addto){
-  console.log(addto.first);
-}

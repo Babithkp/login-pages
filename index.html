@@ -11,8 +11,10 @@
     <title>Login</title>
   </head>
   <body>
+    <div class="logined">
+        <div class="logined-msg">welcome to the page</div>
+    </div>
     <div class="container">
-
       <div class="login-page ">
         <h2>login</h2>
         <div class="logo">
@@ -21,11 +23,14 @@
         </div>
         <p class="login-page--or">or use your account</p>
         <div class="login-page-form">
+          <p class="login-page--accNotFound">
+                User not found !
+              </p>
           <input type="text" class="login-page-form--email" placeholder="Email">
           <p class="required-Email">
                 Please fill the Email This field is required !
               </p>
-            <input type="password" class="login-page-form--password" placeholder="Password">
+            <input type="password" class="login-page-form--password" placeholder="Password" minlength="8" required>
             <p class="required-pass">
                 Please fill the Password This field is required !
               </p>
@@ -59,7 +64,7 @@
             <p class="required-email">
                 This field is required !
               </p>
-            <input type="password" class="signup-page-form--password" placeholder="password">
+            <input type="password" class="signup-page-form--password" placeholder="password" minlength="8" required>
             <p class="required-password">
                 This field is required !
               </p>
