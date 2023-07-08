@@ -177,16 +177,13 @@ a {
   &-Email{
     @include required;
     @include signin;
-    // display: block;
   }
   &-pass{
     @include required;
     @include signin;
-    // display: block;
   }
   &-wrong{
     @include required;
     @include signin;
-    // display: block;
   }
 }
