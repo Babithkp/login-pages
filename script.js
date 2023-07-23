@@ -34,6 +34,7 @@ const fieldconform = document.querySelector(".required-conform");
 
 
 const logined = document.querySelector(".logined");
+const back = document.querySelector(".signin");
 
 
 const account = {
@@ -126,8 +127,8 @@ signIn.addEventListener("click", function () {
 });
 
 signUp.addEventListener("click", function () {
-  logPage.style = "transform: rotateY(-180deg)";
-  subPage.style = "transform: rotateY(0deg)";
+  logPage.classList.toggle("loginReverse");
+  subPage.classList.toggle("loginNone");
 });
 
 finalsignUp.addEventListener("click", function () {
@@ -148,9 +149,13 @@ finalsignUp.addEventListener("click", function () {
     required.checked &&
     addto.pass === addto.compass
   ) {
-    logPage.style = "transform: rotateY(0deg)";
-    subPage.style = "transform: rotateY(180deg)";
+    logPage.classList.toggle("loginNone");
+    subPage.classList.toggle("login");
     addto.createAcc();
   }
 });
 
+back.addEventListener("click",function(){
+  logPage.classList.toggle("loginReverse");
+  subPage.classList.toggle("loginNone");
+})
