@@ -63,33 +63,42 @@ class details {
   };
 }
 
+const redBlock = function(field, place){
+  field.style.display = "block";
+  place.style.outline = "red solid 2px";
+}
+
+const revRedBlock = function(field, place){
+  field.style.display = "none";
+  place.style.outline = "none";
+}
+
+const displayBlock = function(place){
+  place.style.display = "block";
+}
+
 const condition = function (addto) {
   if (!addto.first) {
-    fieldfirst.style.display = "block";
-    GetFirst.style.outline = "red solid 2px";
+    redBlock(fieldfirst,GetFirst);
   }
   if (!addto.last) {
-    fieldlast.style.display = "block";
-    Getlast.style.outline = "red solid 2px";
+    redBlock(fieldlast, Getlast);
   }
   if (!addto.email) {
-    fieldemail.style.display = "block";
-    Getmail.style.outline = "red solid 2px";
+    redBlock(fieldemail, Getmail);
   }
   if (!addto.pass) {
-    fieldpassword.style.display = "block";
-    Getpass.style.outline = "red solid 2px";
+    redBlock(fieldpassword, Getpass);
   }
   if (!addto.compass) {
-    fieldconform.style.display = "block";
-    Getcomform.style.outline = "red solid 2px";
+    redBlock(fieldconform, Getcomform);
   }
 
   if (!required.checked) {
-    checked.style.display = "block";
+    displayBlock(checked);
   }
   if (addto.pass !== addto.compass) {
-    wrong.forEach((el) => (el.style.display = "block"));
+    wrong.forEach((el) => (displayBlock(el)));
     Getpass.style.outline = "red solid 2px";
     Getcomform.style.outline = "red solid 2px";
   }
@@ -98,19 +107,20 @@ const condition = function (addto) {
 
 const logincondition = function (GetMail, GetPassword) {
   if (!GetMail) {
-    loginEmailRequired.style.display = "block";
-    email.style.outline = "red solid 2px";
-    return false;
-  } else if (GetMail !== account.email) {
-    loginEmailAcNOt.style.display = "block";
-    return false;
-  } else if (GetPassword !== account.pass) {
-    loginPassWrongpass.style.display = "block";
+    console.log("mail");
+    console.log(GetPassword);
+    redBlock(loginEmailRequired, email);
     return false;
   }
   if (!GetPassword) {
-    loginPassRequired.style.display = "block";
-    password.style.outline = "red solid 2px";
+    console.log("password");
+    redBlock(loginPassRequired, password);
+    return false;
+  } else if (GetMail !== account.email) {
+    displayBlock(loginEmailAcNOt);
+    return false;
+  } else if (GetPassword !== account.pass) {
+    displayBlock(loginPassWrongpass);
     return false;
   }
   return true;
@@ -129,6 +139,8 @@ signIn.addEventListener("click", function () {
 signUp.addEventListener("click", function () {
   logPage.classList.toggle("loginReverse");
   subPage.classList.toggle("loginNone");
+  email.value = "";
+  password.value = "";
 });
 
 finalsignUp.addEventListener("click", function () {
@@ -156,6 +168,18 @@ finalsignUp.addEventListener("click", function () {
 });
 
 back.addEventListener("click",function(){
+  revRedBlock(fieldfirst,GetFirst);
+  revRedBlock(fieldlast,Getlast);
+  revRedBlock(fieldemail,Getmail);
+  revRedBlock(fieldpassword, Getpass);
+  revRedBlock(fieldconform, Getcomform);
+  checked.style.display = "none";
   logPage.classList.toggle("loginReverse");
   subPage.classList.toggle("loginNone");
+  GetFirst.value ="";
+  Getlast.value = "";
+  Getmail.value = "";
+  Getpass.value = "";
+  Getcomform.value = "";
+  required.checked = false;
 })

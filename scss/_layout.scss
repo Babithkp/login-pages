@@ -61,6 +61,15 @@
       border: none;
       outline: none;
       padding-left: 0.5rem;
+      // outline: rgb(14, 121, 14) solid 2px;
+    }
+    &--email:focus:valid,
+    &--password:focus:valid{
+      outline: rgb(14, 121, 14) solid 2px;
+    }
+    &--email:focus:invalid,
+    &--password:focus:invalid{
+      outline: red solid 2px;
     }
   }
   &--btn {
@@ -140,14 +149,27 @@ h2 {
       outline: none;
       padding-left: 0.2rem;
       font-size: 1.2rem;
+    }
+    &--firstname:focus:valid,
+    &--lastname:focus:valid,
+    &--email:focus:valid,
+    &--password:focus:valid,
+    &--conformpassword:focus:valid{
       outline: rgb(14, 121, 14) solid 2px;
+    }
+    &--firstname:focus:invalid,
+    &--lastname:focus:invalid,
+    &--email:focus:invalid,
+    &--password:focus:invalid,
+    &--conformpassword:focus:invalid{
+      outline: red solid 2px;
     }
 
     &--wrongPass {
       margin-top: -1rem;
       color: red;
-      font-size: 0.9rem;
-      // visibility: hidden;
+      font-size: 1rem;
+
       display: none;
     }
   }
@@ -194,6 +216,7 @@ a {
     @include required;
     @include signin;
   }
+  
 }
 
 .logined{
@@ -209,8 +232,7 @@ a {
 }
 
 .already{
-  padding-top: -10rem;
-  margin-bottom: 2rem;
+  margin-bottom: .1rem;
 }
 
 .loginReverse{

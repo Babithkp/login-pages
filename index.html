@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;700&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="/img/download.png">
-    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="/scss/main.css"/>
     <script src="script.js" defer=""></script>
     
     <title>Login</title>
@@ -26,7 +26,7 @@
           <p class="login-page--accNotFound">
                 User not found !
               </p>
-          <input type="text" class="login-page-form--email" placeholder="Email">
+          <input type="text" class="login-page-form--email" placeholder="Email" pattern=".+@gmail.com" minlength="18 " required>
           <p class="required-Email">
                 Please fill the Email This field is required !
               </p>
@@ -52,15 +52,15 @@
           <h2 class="login-page--head">Sign Up</h2>
           <p class="login-page--intruct">Please fill in the form to create an account</p>
           <div class="signup-page-form">
-            <input type="text" class="signup-page-form--firstname" placeholder="First name">
+            <input type="text" class="signup-page-form--firstname" placeholder="First name" minlength="5" required>
             <p class="required-first">
                 This field is required !
               </p>
-            <input type="text" class="signup-page-form--lastname" placeholder="Last name">
+            <input type="text" class="signup-page-form--lastname" placeholder="Last name" minlength="1" required>
             <p class="required-last">
                 This field is required !
               </p>
-            <input type="email" class="signup-page-form--email" placeholder="Email">
+            <input type="email" class="signup-page-form--email" placeholder="Email" pattern=".+@gmail.com" minlength="18" required>
             <p class="required-email">
                 This field is required !
               </p>
@@ -71,7 +71,7 @@
             <div class="signup-page-form--wrongPass">
               Please check entered password !
             </div>
-            <input type="text" class="signup-page-form--conformpassword" placeholder="Conform Password">
+            <input type="text" class="signup-page-form--conformpassword" placeholder="Conform Password" minlength="8" required>
             <p class="required-conform">
                 This field is required !
               </p>
