@@ -204,10 +204,10 @@ h2 {
   font-size: 1.2rem;
 }
 .signup-page-form--firstname:focus:valid, .signup-page-form--lastname:focus:valid, .signup-page-form--email:focus:valid, .signup-page-form--password:focus:valid, .signup-page-form--conformpassword:focus:valid {
-  outline: rgb(14, 121, 14) solid 2px;
+  border: rgb(14, 121, 14) solid 2px;
 }
 .signup-page-form--firstname:focus:invalid, .signup-page-form--lastname:focus:invalid, .signup-page-form--email:focus:invalid, .signup-page-form--password:focus:invalid, .signup-page-form--conformpassword:focus:invalid {
-  outline: red solid 2px;
+  border: red solid 2px;
 }
 .signup-page-form--wrongPass {
   margin-top: -1rem;

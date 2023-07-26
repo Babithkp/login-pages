@@ -155,14 +155,14 @@ h2 {
     &--email:focus:valid,
     &--password:focus:valid,
     &--conformpassword:focus:valid{
-      outline: rgb(14, 121, 14) solid 2px;
+      border: rgb(14, 121, 14) solid 2px;
     }
     &--firstname:focus:invalid,
     &--lastname:focus:invalid,
     &--email:focus:invalid,
     &--password:focus:invalid,
     &--conformpassword:focus:invalid{
-      outline: red solid 2px;
+      border: red solid 2px;
     }
 
     &--wrongPass {
