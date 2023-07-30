@@ -78,6 +78,12 @@ body {
   outline: none;
   padding-left: 0.5rem;
 }
+.login-page-form--email:focus:valid, .login-page-form--password:focus:valid {
+  outline: rgb(14, 121, 14) solid 2px;
+}
+.login-page-form--email:focus:invalid, .login-page-form--password:focus:invalid {
+  outline: red solid 2px;
+}
 .login-page--btn {
   width: 100%;
   display: flex;
@@ -196,14 +202,18 @@ h2 {
   outline: none;
   padding-left: 0.2rem;
   font-size: 1.2rem;
-  outline: rgb(14, 121, 14) solid 2px;
+}
+.signup-page-form--firstname:focus:valid, .signup-page-form--lastname:focus:valid, .signup-page-form--email:focus:valid, .signup-page-form--password:focus:valid, .signup-page-form--conformpassword:focus:valid {
+  border: rgb(14, 121, 14) solid 2px;
+}
+.signup-page-form--firstname:focus:invalid, .signup-page-form--lastname:focus:invalid, .signup-page-form--email:focus:invalid, .signup-page-form--password:focus:invalid, .signup-page-form--conformpassword:focus:invalid {
+  border: red solid 2px;
 }
 .signup-page-form--wrongPass {
   margin-top: -1rem;
   color: red;
-  font-size: 0.5rem;
+  font-size: 1rem;
   display: none;
-  margin-bottom: -2rem;
 }
 .signup-page--required {
   display: none;
